@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  hcetpd_sslvpn:
+    # build:
+    #   dockerfile: Dockerfile
+    image: shensven/hcetpd-sslvpn
+    tty: true
+    ports:
+      - "22:22"
+    volumes:
+      - ./sslvpn.xml:/etc/sslvpn.conf
